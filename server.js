@@ -107,6 +107,9 @@ async function sendMessage(inputData, header) {
   }
 }
 // ✅ Route to handle form
+app.get("/", (req, res) => {
+  res.send("Running well!");
+});
 app.post("/listings", async (req, res) => {
   try {
     await sendMessage(req.body, "Small Business Deal Analyzer");
