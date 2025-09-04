@@ -97,8 +97,8 @@ async function sendMessage(inputData, header) {
   });
   try {
     const data = await mg.messages.create(process.env.MAILGUN_DOMAIN, {
-      from: "Mailgun Sandbox <postmaster@sandboxa0bd0d9bb8e3494897fb14f4e9a2d1f6.mailgun.org>",
-      to: ["Trent Lee <trentlee@trentlee.me>"],
+      from: `Trent Lee <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+      to: ["Trent Lee <trent@fcbb.com>", "Jake Woodall <jakewoodall002@gmail.com>"],
       subject: header,
       text: JSON.stringify(inputData)
     });
